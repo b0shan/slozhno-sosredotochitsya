@@ -2,4 +2,12 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  
+}
+
+
+.header__theme-menu-list {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  justify-content: end;
 }
