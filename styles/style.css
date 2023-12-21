@@ -2,7 +2,32 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  min-inline-size: 375x;
+  background-image: var(--cover-image);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: var(--main-font, sans-serif)
+}
+
+.header__title {
+  color: var(--accent-head-color);
+  line-height: 82.5%;
+  font-weight: 700;
+  font-size: var(--fontsize-mobile);
   
+ 
+}
+
+/*.attention {
+  color: var(--accent-color-text-background);
+  
+
+}*/
+
+.accent__background {
+  background-color: var(--accent-color);
 }
 
 
@@ -10,4 +35,8 @@
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   justify-content: end;
+}
+
+.question{
+  color: var(--accent-text-color);
 }
