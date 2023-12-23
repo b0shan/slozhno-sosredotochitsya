@@ -2,41 +2,80 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  min-inline-size: 375x;
+  /*min-inline-size: 375px;*/
   background-image: var(--cover-image);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
   background-attachment: fixed;
-  font-family: var(--main-font, sans-serif)
+  font-family: var(--main-font, sans-serif);
+  padding: 10px;
+  margin: 0 auto;
 }
+
+.header__theme-menu-list {
+  list-style: none;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  justify-content: end;
+  margin-block-start: 40px;  /*скорее всего надо будет превратить в адаптив*/
+  gap: 3px;
+}
+
+.header__theme-menu-button  {
+  color: var(--accent-color);
+  background-color: transparent;
+  font-family: inherit;
+  border: none;
+  text-transform: lowercase;
+}
+
+
+
 
 .header__title {
   color: var(--accent-head-color);
   line-height: 82.5%;
   font-weight: 700;
   font-size: var(--fontsize-mobile);
-  
- 
 }
 
-/*.attention {
-  color: var(--accent-color-text-background);
-  
+.shadow__text__header {
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
 
-}*/
+.attention {
+  font-weight: bold;
+  margin-block-end: 120px; /*скорее всего надо будет превратить в адаптив*/
+  margin-block-start: 15px;
+  padding-inline-end: 50px;
+}
 
 .accent__background {
   background-color: var(--accent-color);
 }
 
-
-.header__theme-menu-list {
-  display: grid;
-  grid-template-rows: 1fr min-content 1fr;
-  justify-content: end;
-}
-
 .question{
   color: var(--accent-text-color);
+}
+
+.basic__text {
+  color: var(--basic-text-color)
+}
+
+.images__list {
+  display: grid;
+  grid-template-rows: min-content;
+
+}
+
+.image {
+  inline-size: 90%;
+  object-fit: cover;
+  object-position: top;
+  block-size: 100%;
+}
+
+.shadow__text__footer {
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
