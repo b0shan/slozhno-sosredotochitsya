@@ -9,8 +9,8 @@
   background-size: cover;
   background-attachment: fixed;
   font-family: var(--main-font, sans-serif);
-  padding: 10px;
-  margin: 0 auto;
+  /*padding: 10px;*/
+  margin: 0 10px;
 }
 
 .header__theme-menu-list {
@@ -18,7 +18,7 @@
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   justify-content: end;
-  margin-block-start: 40px;  /*скорее всего надо будет превратить в адаптив*/
+  /*margin-block-start: 40px;  /*скорее всего надо будет превратить в адаптив*/
   gap: 3px;
 }
 
@@ -53,6 +53,7 @@
 
 .accent__background {
   background-color: var(--accent-color);
+  margin: 0;
 }
 
 .question{
@@ -63,17 +64,23 @@
   color: var(--basic-text-color)
 }
 
+
+.images {
+  /*margin: 10px 10px;*/
+  
+}
+
 .images__list {
   display: grid;
-  grid-template-rows: min-content;
-
+  grid-template-columns: 355px;
+  padding: 0;
+  row-gap: 5px;
+  margin: 10px 0 0;
 }
 
 .image {
-  inline-size: 90%;
-  object-fit: cover;
-  object-position: top;
-  block-size: 100%;
+  inline-size: 100%;
+  
 }
 
 .shadow__text__footer {
