@@ -45,25 +45,22 @@
 }
 
 .attention {
-  font-weight: bold;
-  margin-block-end: 120px; /*скорее всего надо будет превратить в адаптив*/
-  margin-block-start: 15px;
-  padding-inline-end: 50px;
+  justify-self: end;
+  margin: 0;
+  margin-block-end: 150px;
+  background-color: var(--accent-color);
 }
+
+.attention__text  {
+  font-weight: bold;
+  padding-right: 45px;
+}
+
 
 .accent__background {
   background-color: var(--accent-color);
   margin-block: 5px;
 }
-
-/*.why__sector {
-  display: grid;
-}*/
-
-/*.what__sector {
-  display: grid;
-}*/
-
 
 .question{
   color: var(--accent-text-color);
@@ -86,7 +83,6 @@
 
 .images {
   /*margin: 10px 10px;*/
-  
 }
 
 .images__list {
@@ -102,8 +98,15 @@
   
 }
 
+.footer {
+  display: grid;
+}
+
 .shadow__text__footer {
   text-shadow: 2px 2px 0 var(--accent-color);
+  justify-self: center;
+  align-self: center;
+  margin-block: 330px;
 }
 
 
@@ -114,15 +117,17 @@
     grid-template-columns: 256px 1fr;
   }
 
+
+  .how__sector {
+    display: grid;
+    grid-template-columns: 256px 1fr;
+  }
+
+
+
   .question {
     max-inline-size: 236px;
   }
-
-  .row  {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
 
   .images {
     margin: 60px 0;
