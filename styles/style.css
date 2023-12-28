@@ -168,3 +168,22 @@
 
   
 }
+
+@media (min-width: 1024px) {
+
+  .what__list  {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .header__theme-menu  {
+    display: grid;
+  }
+  
+  .header__theme-menu-list  {
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr;
+    justify-self:center;
+  }
+}
+
