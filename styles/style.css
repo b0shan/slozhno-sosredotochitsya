@@ -20,15 +20,39 @@
   justify-content: end;
   /*margin-block-start: 40px;  /*скорее всего надо будет превратить в адаптив*/
   gap: 3px;
+  margin-block-start: 100px;
 }
 
 .header__theme-menu-button  {
-  color: var(--accent-color);
+  color: var(--accent-color-button);
   background-color: transparent;
   font-family: inherit;
   border: none;
   text-transform: lowercase;
+  padding: 0 13px; 
+  size: 18px;
 }
+
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--button-hover-color);
+  
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--accent-color);
+  outline: none;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--menu-active);
+  /*pointer-events: none;*/
+}
+
 
 
 
@@ -41,7 +65,7 @@
 }
 
 .shadow__text__header {
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 4px 4px 0 var(--accent-color-shadow);
 }
 
 .attention {
@@ -184,6 +208,12 @@
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
     justify-self:center;
+    margin: 0 0 100px;
+
   }
+
+  
+
 }
+
 

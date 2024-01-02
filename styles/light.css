@@ -10,8 +10,12 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --accent-color: #FF8DCB;
+  --accent-color-button: #353430;
   --accent-head-color: #FFC2E6;
   --cover-image: url(../images/cover-image-light.png);
   --accent-text-color: #353430;
-  --basic-text-color:#F1B2CE;
+  --basic-text-color:#353430;
+  --button-hover-color: #353430;
+  --menu-active:#353430;
+  --accent-color-shadow: #FF0070;
 }
