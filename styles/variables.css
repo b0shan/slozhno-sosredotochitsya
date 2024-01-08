@@ -5,7 +5,7 @@
 /* stylelint-disable-next-line rule-empty-line-before */
 :root {
   --accent-color: #ff0070;
-  --accent-color-button: #FF8DCB;
+  --accent-color-button: #FF0070;
   --accent-head-color: #db00ff;
   --cover-image: url(../images/cover-image-dark.png);
   --accent-text-color: #ff0070;

@@ -5,7 +5,6 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  /*min-inline-size: 375px;*/
   align-items: center;
   background-image: var(--cover-image);
   background-repeat: no-repeat;
@@ -13,14 +12,59 @@
   background-size: cover;
   background-attachment: fixed;
   font-family: var(--main-font, sans-serif);
-  /*padding: 10px;*/
-  margin: 0 10px;
-  
+  padding: 10px;
+  margin: 0;
+  font-size: 18px;
 }
 
 .header {
   display: grid;
+  position: relative;
   grid-template-rows: auto max-content auto;
+  min-height: 98vh;
+}
+
+.header:before {
+  content: '';
+  display: block;
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  right: 0;
+  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--accent-color);
+}
+
+.header:after {
+  content: '';
+  display: block;
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  bottom: 5px;
+  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.decor__icon {
+  position: absolute;
+  display: flex;
+  gap: 10px;
+  margin: 2px 5px 0 0;
+  right: 7px;
+  color: var(--accent-color);
+  justify-self:end;
+}
+
+.decor__icon::after {
+  content: '';
+  display: block;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 5px var(--accent-color);
+  background-color: var(--accent-color);
+  block-size: 6px;
+  inline-size: 6px;
+  margin-top: 7px;
 }
 
 .header__theme-menu-list {
@@ -28,9 +72,8 @@
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   justify-content: end;
-  /*margin-block-start: 40px;  /*скорее всего надо будет превратить в адаптив*/
-  gap: 3px;
-  margin-block-start: 100px;
+  gap: 13px;
+  margin-block-start: 65px;
 }
 
 .header__theme-menu-button  {
@@ -40,9 +83,7 @@
   border: none;
   text-transform: lowercase;
   padding: 0 13px; 
-  size: 18px;
 }
-
 
 .header__theme-menu-button:hover {
   outline: 1px solid var(--button-hover-color);
@@ -59,18 +100,14 @@
 
 .header__theme-menu-button_active {
   outline: 1px solid var(--menu-active);
-  /*pointer-events: none;*/
 }
-
-
-
-
 
 .header__title {
   color: var(--accent-head-color);
   line-height: 82.5%;
   font-weight: 700;
   font-size: var(--fontsize-mobile);
+  padding-bottom: 60px;
 }
 
 .shadow__text__header {
@@ -79,23 +116,17 @@
 
 .attention {
   justify-self: end;
-  max-inline-size: 491px;
-  margin: 0;
-  margin-block-end: 150px;
-  background-color: var(--accent-color);
 }
 
 .attention__text  {
   font-weight: bold;
-  /*padding-right: 45px;*/
-  
+  justify-self: end;
+  background-color: var(--accent-color);
+  padding-right: 45px;
 }
-
 
 .accent__background {
   background-color: var(--accent-color);
-  margin: 0;
-  margin-block: 5px;
 }
 
 .question{
@@ -107,11 +138,6 @@
   padding-left: 0;
 }
 
-.question__list-item {
-  /*margin-inline-start: 0;
-  padding-left: 0;*/
-}
-
 .basic__text {
   color: var(--basic-text-color)
 }
@@ -120,10 +146,6 @@ a {
   color: var(--basic-text-color);
   text-decoration: inherit; 
   text-shadow: 1px 1px 0 var(--accent-color-shadow);
-}
-
-.images {
-  /*margin: 10px 10px;*/
 }
 
 .images__list {
@@ -137,7 +159,6 @@ a {
 
 .image {
   inline-size: 100%;
-  
 }
 
 .footer {
@@ -148,23 +169,25 @@ a {
   text-shadow: 2px 2px 0 var(--accent-color-shadow);
   justify-self: center;
   align-self: center;
-  margin-block: 330px;
+  margin-block: 250px;
 }
 
 @media (min-width: 768px) {
+
+  .header__title {
+    font-size: var(--fontsize-desktop);
+  }
+
 
   .why__sector {
     display: grid;
     grid-template-columns: 256px 1fr;
   }
 
-
   .how__sector {
     display: grid;
     grid-template-columns: 256px 1fr;
   }
-
-
 
   .question {
     max-inline-size: 236px;
@@ -206,8 +229,6 @@ a {
   .images__list-item:last-child {
     grid-column: 2 / 4;
   }
-
-  
 }
 
 @media (min-width: 1024px) {
@@ -228,9 +249,6 @@ a {
     margin: 0 0 100px;
 
   }
-
-  
-
 }
 
 
