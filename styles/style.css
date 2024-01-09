@@ -11,8 +11,8 @@
   background-position: top center;
   background-size: cover;
   background-attachment: fixed;
-  font-family: var(--main-font, sans-serif);
-  padding: 10px;
+  font-family: var(--main-font, monospace);
+  padding: 20px;
   margin: 0;
   font-size: 18px;
 }
@@ -21,7 +21,8 @@
   display: grid;
   position: relative;
   grid-template-rows: auto max-content auto;
-  min-height: 98vh;
+  min-block-size: 668px;
+  max-block-size: 100vh;
 }
 
 .header:before {
@@ -30,9 +31,9 @@
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
-  right: 0;
-  border-right: 1px solid var(--accent-color);
-  border-top: 1px solid var(--accent-color);
+  inset-inline-end: 0;
+  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--accent-color);
 }
 
 .header:after {
@@ -41,9 +42,9 @@
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
-  bottom: 5px;
-  border-left: 1px solid var(--accent-color);
-  border-bottom: 1px solid var(--accent-color);
+  inset-block-end: 5px;
+  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
 }
 
 .decor__icon {
@@ -51,7 +52,7 @@
   display: flex;
   gap: 10px;
   margin: 2px 5px 0 0;
-  right: 7px;
+  inset-inline-end: 7px;
   color: var(--accent-color);
   justify-self:end;
 }
@@ -64,7 +65,7 @@
   background-color: var(--accent-color);
   block-size: 6px;
   inline-size: 6px;
-  margin-top: 7px;
+  margin-block-start: 7px;
 }
 
 .header__theme-menu-list {
@@ -83,6 +84,7 @@
   border: none;
   text-transform: lowercase;
   padding: 0 13px; 
+  cursor: pointer;
 }
 
 .header__theme-menu-button:hover {
@@ -90,7 +92,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
   outline: none;
 }
 
@@ -107,7 +109,7 @@
   line-height: 82.5%;
   font-weight: 700;
   font-size: var(--fontsize-mobile);
-  padding-bottom: 60px;
+  padding-block-end: 60px;
 }
 
 .shadow__text__header {
@@ -122,7 +124,7 @@
   font-weight: bold;
   justify-self: end;
   background-color: var(--accent-color);
-  padding-right: 45px;
+  padding-inline-end: 45px;
 }
 
 .accent__background {
@@ -135,7 +137,7 @@
 
 .question__list {
   list-style-type: none;
-  padding-left: 0;
+  padding-inline-start: 0;
 }
 
 .basic__text {
@@ -145,7 +147,7 @@
 a {
   color: var(--basic-text-color);
   text-decoration: inherit; 
-  text-shadow: 1px 1px 0 var(--accent-color-shadow);
+  text-shadow: 2px 2px 0 var(--accent-color-shadow);
 }
 
 .images__list {
@@ -159,10 +161,14 @@ a {
 
 .image {
   inline-size: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .footer {
   display: grid;
+  min-block-size: 668px;
+  max-block-size: 100vh;
 }
 
 .shadow__text__footer {
