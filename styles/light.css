@@ -18,4 +18,9 @@
   --button-hover-color: #353430;
   --menu-active:#353430;
   --accent-color-shadow: #FF0070;
+  --decor-icon-display: none;
+}
+
+.page.theme_light.decor__icon {
+  display: none;
 }
