@@ -147,6 +147,7 @@
 .accent__background__main {
   background-color: var(--accent-color);
   font-size: inherit;
+  block-size: auto;
 }
 
 .question__main {
@@ -274,6 +275,7 @@ a {
   }
 
   .question__list  {
+    column-gap: 22px;
     row-gap: 2vh;
   }
 
@@ -341,36 +343,101 @@ a {
     margin-inline-start: 0;
     margin-block-start: -2.4vh;
   }
-
 }
 
 @media (min-width: 1024px) {
 
-  .what__list  {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  
   .header__theme-menu  {
     display: grid;
-    /*grid-template-rows: 1fr;*/
-    /*align-content: start;*/
+    margin-block-start: 0;
   }
   
   .header__theme-menu-list  {
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
     justify-self:center;
-    /*margin: 0 0 100px;*/
     grid-row-start: 1;
     grid-row-end: 2;
     align-self: start;
   }
 
-  .attention {
-    max-inline-size: 50vw;
+  .header__title {
+    margin-inline-start: -20px;
+    margin-block: -6vh 0;
   }
 
+  .attention {
+    max-inline-size: 48vw;
+    margin-block-start: 15vh;
+  }
+
+  .question__main {
+    margin-block: 6.3vh 2.5vh;
+  }
+
+  .question__section {
+    row-gap: 2.7vh;
+    margin-block: 1.5vh 10.8vh;
+  }
+
+  .question__list  {
+    row-gap: 3vh;
+  }
+
+  .question {
+    max-inline-size: 315px;
+  }
+
+  .question__list-item {
+    row-gap: 1vh;
+  }
+
+  .accent__background__main {
+    block-size: 23px;
+    margin-block-end: 0;
+  }
+
+  .basic__text {
+    align-items: start;
+  }
+
+  .what__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+  }
+
+  .why__sector {
+    display: grid;
+    grid-template-columns: 1fr 84.5vh;
+  }
+
+  .how__sector {
+    display: grid;
+    grid-template-columns: 1fr 84.5vh;
+  }
+
+  body > main > section.how__sector.question__section > div {
+    row-gap: 19px;
+  }
+
+  body > main > section.how__sector.question__section > div > ul {
+    row-gap: 24px;
+  } 
+
+  body > main > section.how__sector.question__section > div > ul > li:nth-child(3) {
+    margin-block-start: -4px;
+  }
+
+  .footer {
+    block-size: calc(100vh - 40px);
+    
+  }
+
+  .shadow__text__footer {
+    margin-inline-start: 0;
+    margin-block-start: -1.5vh;
+  }
 }
 
 
