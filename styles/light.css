@@ -15,10 +15,12 @@
   --cover-image: url(../images/cover-image-light.png);
   --accent-text-color: #353430;
   --basic-text-color:#353430;
-  --button-hover-color: #353430;
+  --button-hover-color: rgb(50 49 45 / 0.40);
+  --focus-color: #353430;
   --menu-active:#353430;
   --accent-color-shadow: #FF0070;
   --decor-icon-display: none;
+  --angle-color: #353430;
 }
 
 .page.theme_light.decor__icon {

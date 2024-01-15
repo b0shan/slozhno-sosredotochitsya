@@ -34,8 +34,8 @@
   inline-size: 25px;
   block-size: 25px;
   inset-inline-end: 0;
-  border-inline-end: 1px solid var(--accent-color);
-  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--angle-color);
+  border-block-start: 1px solid var(--angle-color);
 }
 
 .header:after {
@@ -45,8 +45,8 @@
   inline-size: 25px;
   block-size: 25px;
   inset-block-end: 20px;
-  border-inline-start: 1px solid var(--accent-color);
-  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--angle-color);
+  border-block-end: 1px solid var(--angle-color);
 }
 
 .decor__icon {
@@ -63,11 +63,11 @@
   content: '';
   display: block;
   border-radius: 50%;
-  box-shadow: 0 0 5px 5px var(--accent-color);
+  box-shadow: 0 0 4px 4px var(--accent-color);
   background-color: var(--accent-color);
   block-size: 6px;
   inline-size: 6px;
-  margin-block-start: 7px;
+  margin-block-start: 8px;
 }
 
 .header__theme-menu {
@@ -103,7 +103,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-block-end: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--focus-color);
   outline: none;
 }
 
@@ -219,8 +219,8 @@ a {
   inline-size: 25px;
   block-size: 25px;
   inset-inline-end: 0;
-  border-inline-end: 1px solid var(--accent-color);
-  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--angle-color);
+  border-block-start: 1px solid var(--angle-color);
 }
 
 .footer:after {
@@ -230,8 +230,8 @@ a {
   inline-size: 25px;
   block-size: 25px;
   inset-block-end: 0;
-  border-inline-start: 1px solid var(--accent-color);
-  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--angle-color);
+  border-block-end: 1px solid var(--angle-color);
 }
 
 .shadow__text__footer {
