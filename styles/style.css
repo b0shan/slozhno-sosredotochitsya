@@ -81,14 +81,10 @@
 .header__theme-menu-list {
   list-style: none;
   display: grid;
-  /*grid-template-rows: 1fr min-content 1fr;*/
   justify-content: end;
-  /*align-self: center;*/
   gap: 13px;
-  /*margin-block-start: 9.7vh;*/
   grid-row-start: 2;
   grid-row-end: 3;
-  /*max-block-size: 130px;*/
   align-self: center;
 }
 
@@ -132,8 +128,9 @@
 }
 
 .attention {
-  justify-self: start;
+  justify-self: end;
   margin-block-start: 8.3vh;
+  max-inline-size: 364px;
 }
 
 .attention__text  {
@@ -197,7 +194,6 @@ a {
   row-gap: 1.5vh;
   margin-block: 1.5vh 4.5vh;
   list-style-type: none;
-  
 }
 
 .image {
@@ -254,14 +250,36 @@ a {
   }
 
   .header__theme-menu {
-   /*margin-block-start: 171px;*/
-   block-size: 45vh;
+    block-size: 45vh;
+    margin-block-start: -10px;
   }
 
   .header__title {
     font-size: var(--fontsize-desktop);
+    margin-inline-start: -20px;
+    margin-block-end: -10px;
   }
 
+  .attention {
+    margin-block-start: 173px;
+  }
+
+  .question__main {
+    margin-block: 4.4vh 2vh;
+  }
+
+  .question__section {
+    row-gap: 2.2vh;
+    margin-block: 1.5vh 7.7vh;
+  }
+
+  .question__list  {
+    row-gap: 2vh;
+  }
+
+  .question__list-item {
+    row-gap: 1vh;
+  }
 
   .why__sector {
     display: grid;
@@ -291,9 +309,9 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(3, fit-content);
-    row-gap: 15px;
+    row-gap: 20px;
     column-gap: var(--gap);
-    margin: 15px 0 0;
+    margin-block-start: 20px;
   }
 
   .images__list-item:nth-child(1) {
@@ -313,6 +331,17 @@ a {
   .images__list-item:last-child {
     grid-column: 2 / 4;
   }
+
+  .footer {
+    block-size: calc(100vh - 40px);
+    padding-block-start: 1.7vh;
+  }
+
+  .shadow__text__footer {
+    margin-inline-start: 0;
+    margin-block-start: -2.4vh;
+  }
+
 }
 
 @media (min-width: 1024px) {
@@ -324,15 +353,25 @@ a {
   
   .header__theme-menu  {
     display: grid;
+    /*grid-template-rows: 1fr;*/
+    /*align-content: start;*/
   }
   
   .header__theme-menu-list  {
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
     justify-self:center;
-    margin: 0 0 100px;
-
+    /*margin: 0 0 100px;*/
+    grid-row-start: 1;
+    grid-row-end: 2;
+    align-self: start;
   }
+
+  .attention {
+    max-inline-size: 50vw;
+  }
+
 }
+
 
 
