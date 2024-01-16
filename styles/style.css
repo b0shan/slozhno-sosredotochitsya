@@ -1,10 +1,4 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
-
-
-
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   align-items: center;
   background-image: var(--cover-image);
   background-repeat: no-repeat;
@@ -17,7 +11,6 @@
   font-size: 18px;
   display: grid;
 }
-
 
 .header {
   display: grid;
@@ -75,7 +68,6 @@
   block-size: 34vh;
   grid-template-rows: 1fr 1fr 1fr;
   align-content: start;
-  /*padding-block-end: 20px;*/
 }
 
 .header__theme-menu-list {
@@ -135,8 +127,8 @@
 
 .attention__text  {
   font-weight: bold;
-  /*background-color: var(--accent-color);*/
   line-height: 130%;
+  color: var(--attention-text-color);
 }
 
 .accent__background__attention {
@@ -145,6 +137,7 @@
 }
 
 .accent__background__main {
+  color: var(--attention-text-color);
   background-color: var(--accent-color);
   font-size: inherit;
   block-size: auto;
@@ -177,7 +170,6 @@
   row-gap: 1.5vh;
 }
 
-
 .basic__text {
   color: var(--basic-text-color);
   line-height: 130%;
@@ -185,8 +177,12 @@
 
 a {
   color: var(--basic-text-color);
-  text-decoration: inherit; 
-  text-shadow: 2px 2px 0 var(--accent-color-shadow);
+  text-decoration: none; 
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+a:hover {
+  border-block-end: 1px solid var(--basic-text-color);
 }
 
 .images__list {

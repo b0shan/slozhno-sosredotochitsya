@@ -1,8 +1,3 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
-/* stylelint-disable-next-line rule-empty-line-before */
 :root {
   --accent-color: #ff0070;
   --accent-color-button: #FF0070;
@@ -20,4 +15,5 @@
   --accent-color-shadow: #FF0070;
   --decor-icon-display: flex;
   --angle-color: #FF0070;
+  --attention-text-color: #000028;
 }
