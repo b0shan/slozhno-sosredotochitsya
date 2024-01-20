@@ -107,11 +107,14 @@
   outline: 1px solid var(--menu-active);
 }
 
-.header__title {
+.title {
   color: var(--accent-head-color);
   line-height: 82.5%;
   font-weight: 700;
   font-size: var(--fontsize-mobile);
+}
+
+.header__title {
   margin-block: -2.9vh 0;
 }
 
@@ -144,13 +147,21 @@
 }
 
 .question__main {
-  margin-block: 3vh 2.9vh;
+  display: grid;
+  /* margin-block: 3vh 2.9vh;  */
+  margin-block-start: clamp(30px, 4.5vh, 60px);
+  /* margin-block-start: 60px; */
+  margin-block-end: clamp(47px, 7.2vh, 80px);
+  row-gap: clamp(51px, 7.5vh, 80px)
 }
 
 .question__section {
   display: grid;
-  row-gap: 3vh;
-  margin-block: 1.5vh 7.6vh;
+  row-gap: 21px;
+  /*margin-block: 1.5vh 7.6vh;*/
+  /* margin-block-start: ;
+  margin-block-end: ; */
+
 }
 
 .question{
@@ -162,12 +173,12 @@
   display: grid;
   list-style-type: none;
   padding-inline-start: 0;
-  row-gap: 3.1vh;
+  row-gap: 20px;
 }
 
 .question__list-item  {
   display: grid;
-  row-gap: 1.5vh;
+  row-gap: 10px;
 }
 
 .basic__text {
@@ -187,17 +198,24 @@ a:hover {
 
 .images__list {
   display: grid;
-  grid-template-columns: 355px;
-  row-gap: 1.5vh;
-  margin-block: 1.5vh 4.5vh;
+  row-gap: 11px;
+  /* margin-block: 1.5vh 4.5vh; */
+  margin-block-start: clamp(11px, 1.5vh, 20px);
+  /*margin-block-end: clamp(10px, 4.5vh, 30px);*/
   list-style-type: none;
+  /*block-size: calc(100% - 10px);*/
 }
+
+/* .images__list-item {
+  margin: 0;
+  padding: 0;
+} */
 
 .image {
   display: block;
   inline-size: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: start;
 }
 
 .footer {
@@ -205,7 +223,7 @@ a:hover {
   display: grid;
   min-block-size: 648px;
   block-size: calc(100vh - 20px);
-  padding-block-start: 3.1vh;
+  /*padding-block-start: 3.1vh; */
 }
 
 .footer:before {
@@ -261,14 +279,14 @@ a:hover {
     margin-block-start: 173px;
   }
 
-  .question__main {
+  /* .question__main {
     margin-block: 4.4vh 2vh;
-  }
+  } */
 
-  .question__section {
+  /* .question__section {
     row-gap: 2.2vh;
     margin-block: 1.5vh 7.7vh;
-  }
+  } */
 
   .question__list  {
     column-gap: 22px;
@@ -293,9 +311,9 @@ a:hover {
     max-inline-size: 236px;
   }
 
-  .images {
+  /* .images {
     margin: 60px 0;
-  }
+  } */
 
   .image {
     object-fit: cover;
@@ -371,10 +389,10 @@ a:hover {
     margin-block: 6.3vh 2.5vh;
   }
 
-  .question__section {
+  /* .question__section {
     row-gap: 2.7vh;
     margin-block: 1.5vh 10.8vh;
-  }
+  } */
 
   .question__list  {
     row-gap: 3vh;
