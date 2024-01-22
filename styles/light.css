@@ -20,7 +20,7 @@
 
 @media (prefers-color-scheme: light) {
   
-  :root{
+  :root {
   --accent-color: #FF8DCB;
   --accent-color-button: #353430;
   --accent-head-color: #FFC2E6;
